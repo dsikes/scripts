@@ -1,3 +1,3 @@
 import os
-os.chdir('../')
+os.chdir('../avi-whitelisting-workflow')
 print(os.listdir(os.getcwd()))

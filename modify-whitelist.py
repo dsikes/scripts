@@ -1,3 +1,3 @@
 import os
 os.chdir('../')
-os.listdir(os.getcwd())
+print(os.listdir(os.getcwd()))

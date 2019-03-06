@@ -22,6 +22,6 @@ f = "%s/%s" % (ansible_workspace_dir, 'wordpress-nginx/site.yml')
 
 yc = get_yaml_content(f)
 print(yc)
-yc["newkey"] = "newval"
+yc[0]["roles"].append("yourmom")
 
 sc = set_yaml_content(f, yc)

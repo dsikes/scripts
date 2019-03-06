@@ -10,3 +10,18 @@ except Exception as err:
 print("========================================")
 print(wlr)
 print("========================================")
+
+
+print("========================================")
+print("SERVICES\n")
+print(wlr['services'])
+
+
+print("IPBLOCKS\n")
+print(wlr['ipblocks'])
+
+
+print("SERVICE NOW TICKET\n")
+print(wlr['service_now_ticket_id'])
+
+print("========================================")

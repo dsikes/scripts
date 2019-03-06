@@ -1,5 +1,4 @@
 import os
-# import fileinput
 import yaml
 ansible_workspace_dir = "%s/ansible-code" % (os.getcwd())
 
@@ -12,9 +11,10 @@ def get_yaml_content(f):
             print(exc)
 
 def set_yaml_content(f, d):
+    os.remove(f)
     with open('result.yml', 'w') as stream:
         try:
-            yaml.dump(d, stream, default_flow_style=False)
+            return yaml.dump(d, stream, default_flow_style=False)
         except yaml.YAMLError as exc:
             print(exc)
 
@@ -25,3 +25,4 @@ print(yc)
 yc[0]["roles"].append("yourmom")
 
 sc = set_yaml_content(f, yc)
+print(sc)

@@ -7,4 +7,6 @@ except Exception as err:
     print(err)
     sys.exit(1)
 
+print("========================================")
 print(wlr)
+print("========================================")

@@ -4,10 +4,7 @@ class WhitelistRequest():
 
     def __init__(self, stream):
         """ sets content property of a whitelist request object """
-        try:
-            self.content = json.load(stream)
-        except Exception as err:
-            raise (str(err))
+        self.content = json.load(stream)
         
     #### PRIVATE METHODS #####
     

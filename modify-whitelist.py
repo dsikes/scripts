@@ -25,6 +25,7 @@ def set_yaml_content(f, d):
 f = "%s/%s" % (ansible_workspace_dir, 'wordpress-nginx/site.yml')
 
 yc = get_yaml_content(f)
+
 print(yc)
 yc[0]["roles"].append("yourmom")
 

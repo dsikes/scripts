@@ -12,7 +12,7 @@ def get_yaml_content(f):
 
 def set_yaml_content(f, d):
     os.remove(f)
-    with open('result.yml', 'w') as stream:
+    with open('result.yml', 'w+') as stream:
         try:
             return yaml.dump(d, stream, default_flow_style=False)
         except yaml.YAMLError as exc:

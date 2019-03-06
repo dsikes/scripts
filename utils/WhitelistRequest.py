@@ -29,7 +29,7 @@ class WhitelistRequest():
 
     #### PUBLIC METHODS ######
     
-    def get_ip_blocks():
+    def get_ip_blocks(self):
 
         if 'ipblocks' in self.content:
             self.ipblocks = self.content['ipblocks']
@@ -38,7 +38,7 @@ class WhitelistRequest():
         raise Exception("no ipblocks in whitelist request")
     
     
-    def get_service_now_ticket_id():
+    def get_service_now_ticket_id(self):
 
         if 'service_now_ticket_id' in self.content:
             self.service_now_ticket_id = self.content['service_now_ticket_id']
@@ -46,7 +46,7 @@ class WhitelistRequest():
         
         raise Exception("no service now ticket id in whitelist request")
     
-    def get_services():
+    def get_services(self):
 
         if 'services' in self.content:
             self.services = self.content['services']

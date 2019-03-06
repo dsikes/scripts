@@ -5,7 +5,7 @@ class WhitelistRequest():
 
     def __init__(self, stream):
         """ sets content property of a whitelist request object """
-        self.content = json.load(stream)
+        self.content = json.loads(stream)
         
     #### PRIVATE METHODS #####
     

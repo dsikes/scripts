@@ -1,3 +1,4 @@
+import json
 import yaml
 
 class WhitelistRequest():

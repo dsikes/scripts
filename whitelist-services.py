@@ -7,7 +7,17 @@ from utils.WhitelistRequest import WhitelistRequest
 # malformed to fail the job.
 
 wlr = WhitelistRequest(sys.argv[1])
-print(wlr.get_ip_blocks())
+
+print("============ SERVICE NOW =================")
+print(wlr.service_now_ticket_id)
+
+
+print("============ IP BLOCKS =================")
+print(wlr.ipblocks)
+
+print("============ SERVICES =================")
+print(wlr.services)
+
 
 # try:
 

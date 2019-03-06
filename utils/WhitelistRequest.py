@@ -1,3 +1,4 @@
+import sys
 import json
 import yaml
 
@@ -40,18 +41,22 @@ class WhitelistRequest():
     #### PUBLIC METHODS #####
     
     def get_yaml_content(self, f):
+        
         with open(f, 'r') as stream:
             try:
-                return yaml.load(stream)
+                self.fcontent = yaml.load(stream)
             except yaml.YAMLError as exc:
                 print(exc)
+                sys.exit(1)
                 
-    def set_yaml_content(self, f, d):
+    def set_yaml_content(self, f):
+        
         if os.path.isfile(f):
             os.remove(f)
         
         with open(f, 'w+') as stream:
             try:
-                yaml.dump(d, stream, default_flow_style=False)
+                yaml.dump(self.fcontent, stream, default_flow_style=False)
             except yaml.YAMLError as exc:
                 print(exc)
+                sys.exit(1)
